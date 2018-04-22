@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 //CORSE
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://transportesq.000webhostapp.com,http://localhost:4200");
+    res.header("Access-Control-Allow-Origin", "http://localhost:4200");
     res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Accept, Origin, Authorization, X-API-KEY, Access-Control-Allow-Request-Method");
     res.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");
     next();
