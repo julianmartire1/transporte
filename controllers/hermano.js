@@ -54,6 +54,7 @@ function agregarHermano(req, res) {
 function listarHermanos(req, res) {
     Hermano.find({})
         .populate({ path: 'user', options: { select: {  user: 1 } } })
+        .sort({ surname : 1 })
         .exec((err, hermano) => {
             if (err)
                 res.status(500).send({ mensaje: "ERROR EN LA PETICION" });
